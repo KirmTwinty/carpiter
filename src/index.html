@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Jumpy's Interface</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<link rel="stylesheet" type="text/css" href="font/font-awesome-4.6.3/css/font-awesome.min.css" />
+	<link rel="stylesheet" type="text/css" media="all" href="css/media.css"/>
+	<link rel="stylesheet" type="text/css" media="all" href="css/mediaplayer.css"/>
+	<script type="text/javascript" src="js/jQuery.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
+	<script type="text/javascript" src="js/mediaelement-and-player.min.js"></script>
+	<script type="text/javascript" src="js/open-navigation.0.1.js"></script>	
+    </head>
+    <body>
+	<header>
+
+	    <div class="audio-player">
+		<h2 class="audio-player-title">The Good Lawdz - Evidence Song</h2>
+		<audio id="audio-player" src="media/evidence-song.mp3" type="audio/mp3" controls="controls"></audio>
+	    </div><!-- @end .audio-player -->
+
+	</header>
+  	<a href="index.html" class="mainMenu"><i class="fa fa-bars" aria-hidden="true"></i></a>
+	<div id="content">
+	    <div id="wrapper">
+		
+		
+		<ul id="nav">
+		    <li>
+			<button href="media.php" class="btn btn-3 btn-3d icon-media" onclick="action_button(this)">Media</button>
+		    </li>
+		    <li>
+			<button href="radio.html" class="btn btn-3 btn-3d icon-radio" onclick="action_button(this)">Radio</button>
+		    </li>
+		    <li>
+			<button href="navigation.html" class="btn btn-3 btn-3d icon-nav" onclick="action_button(this)">Navigation</button>
+		    </li>
+		    <li>
+			<button href="camera.html" class="btn btn-3 btn-3d icon-camera" onclick="action_button(this)">Camera</button>
+		    </li>
+		    <li>
+			<button href="carinfo.html" class="btn btn-3 btn-3d icon-car" onclick="action_button(this)">Car Information</button>
+		    </li>
+		    <li>
+			<button href="settings.html" class="btn btn-3 btn-3d icon-cog" onclick="action_button(this)">Settings</button>
+		    </li>
+		</ul>
+	    </div>
+	</div>
+	<script type="text/javascript">
+	 $(function(){
+	     $('#audio-player').mediaelementplayer({
+		 alwaysShowControls: true,
+		 features: ['playpause','progress','volume'],
+		 audioVolume: 'horizontal',
+		 audioWidth: 450,
+		 audioHeight: 70,
+		 iPadUseNativeControls: true,
+		 iPhoneUseNativeControls: true,
+		 AndroidUseNativeControls: true,
+		 success: function (mediaElement, domObject) {
+                     mediaElement.addEventListener('ended', function (e) {
+			 play_next();
+                     }, false);
+		 },
+	     });
+	     $('.mejs-controls').append('<div class="mejs-button mejs-next-button mejs-next" >' +
+					'<button type="button" onclick="play_next();" aria-controls="Next" title="Next" aria-label="Next"></button>');
+	     $('.mejs-controls').append('<div class="mejs-button mejs-previous-button mejs-previous" >' +
+					'<button type="button" onclick="play_previous();" aria-controls="Previous" title="Previous" aria-label="Previous"></button>');
+	 });
+	</script>
+
+    </body>
+</html>

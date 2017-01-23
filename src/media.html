@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Jumpy's Interface</title>
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+  <link rel="stylesheet" type="text/css" href="font/font-awesome-4.6.3/css/font-awesome.min.css" />
+  <link rel="stylesheet" type="text/css" media="all" href="css/mediaplayer.css"/>
+    <link rel="stylesheet" type="text/css" media="all" href="css/media.css"/>
+  <script type="text/javascript" src="js/jQuery.js"></script>
+  <script type="text/javascript" src="js/script.js"></script>
+  <script type="text/javascript" src="js/mediaelement-and-player.min.js"></script>
+</head>
+<body>
+    <div id="content">
+	<ul class="media-menu">
+	    <li id="previousbtn" class="media-btn" href="index.html" onclick="action_button(this);">
+
+
+		<i class="fa fa-home" aria-hidden="true"></i>
+
+
+
+	    </li>
+	    <li class="media-btn" onclick="order_by('artist')">
+		<i class="fa fa-users" aria-hidden="true"></i>
+	    </li>
+	    <li class="media-btn" onclick="order_by('album')">
+		<i class="fa fa-eercast" aria-hidden="true"></i>
+
+	    </li>
+	    <li class="media-btn" onclick="search">
+		<i class="fa fa-search" aria-hidden="true"></i>
+
+	    </li>
+	</ul>
+	<ul class="media-content">
+	    <li class="header">
+		<span class="song-name">Song Name</span>
+		<span class="artist">Artist</span>
+		<span class="album">Album</span>
+		<span class="duration">Duration</span>
+	    </li>
+		  
+	  	  <li onclick="play(song_id)">
+			  <span class="song-name">Raise your horns</span>
+			  <span class="artist">Amon Amarth</span>
+			  <span class="album">Jomsviking</span>
+			  <span class="duration">05:23</span>
+		  </li>
+	  	  <li onclick="play(song_id)">
+			  <span class="song-name">Where is your god?</span>
+			  <span class="artist">Amon Amarth</span>
+			  <span class="album">Jomsviking</span>
+			  <span class="duration">07:10</span>
+		  </li>
+		  <li onclick="play(song_id)">
+			  <span class="song-name">Guardians of Asgaard</span>
+			  <span class="artist">Amon Amarth</span>
+			  <span class="album">Jomsviking</span>
+			  <span class="duration">07:56</span>
+		  </li>
+	  	  <li onclick="play(song_id)">
+			  <span class="song-name">Death in Fire</span>
+			  <span class="artist">Amon Amarth</span>
+			  <span class="album">Jomsviking</span>
+			  <span class="duration">03:16</span>
+		  </li>
+	  </ul>
+	
+	</div>
+
+</body>
+</html>

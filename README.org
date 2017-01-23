@@ -1,0 +1,18 @@
+* Carpiter - A Raspberry Pi carputer based on a webserver
+Carpiter is a web based application providing all the features needed for a carputer. It is light and (will be) highly customizable.
+The project is still in alpha. 
+Only the media library has been developped and no documentation is available yet.
+
+[[./screenshots/main_interface.png]]
+
+* Media Library
+
+[[./screenshots/media.png]]
+
+* TODO List
+** TODO Create full installation bash script
+** TODO Create first documentation
+** TODO Configure CSS/JS for easy customization
+** TODO GPS WebGL
+** TODO OBD2 integration
+** TODO Languages integration

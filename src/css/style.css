@@ -1,0 +1,174 @@
+body{
+	margin: 0;
+	/* background-color:#fcd04b;	 */
+	background-color:#7B7D82;
+	overflow:hidden;
+}
+#wrapper{
+	margin-left:auto;
+	margin-right:auto;
+	 margin-top: 40vh; /* poussé de la moitié de hauteur de viewport */
+	 transform: translateY(-40%); /* tiré de la moitié de sa propre hauteur */
+	 
+}
+#nav li{
+	width:30%;
+	line-height: 1000%;
+	margin-left:20px;
+	margin-top:20px;
+	display:inline-block;
+	text-align:center;
+}
+header{
+	color:black;
+	display:block;
+	padding:20px;
+	background-color:white;
+}
+.mainMenu{
+	font-size:30px;
+	text-decoration:none;
+	color:black;
+}
+
+@font-face {
+	font-family: 'icomoon';
+	src:url('../font/icomoon.eot');
+	src:url('../font/icomoon.eot?#iefix') format('embedded-opentype'),
+		url('../font/icomoon.woff') format('woff'),
+		url('../font/icomoon.ttf') format('truetype'),
+		url('../font/icomoon.svg#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* General button style (reset) */
+.btn {
+	border: none;
+	font-family: inherit;
+	font-size: inherit;
+	color: inherit;
+	background: none;
+	cursor: pointer;
+	padding: 25px 80px;
+	display: inline-block;
+	margin: 15px 30px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 700;
+	outline: none;
+	position: relative;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.btn:after {
+	content: '';
+	position: absolute;
+	z-index: -1;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+
+/* Pseudo elements for icons */
+.btn:before,
+.icon-heart:after,
+.icon-star:after,
+.icon-plus:after,
+.icon-file:before {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	position: relative;
+	-webkit-font-smoothing: antialiased;
+}
+.icon-media:before {
+	content: "\e910";
+}
+.icon-radio:before {
+	content: "\e911";
+}
+.icon-nav:before {
+	content: "\e94a";
+}
+.icon-camera:before {
+	content: "\e91d";
+}
+.icon-car:before {
+	content: "\e991";
+}
+.icon-cog:before {
+	content: "\e994";
+}
+/* Button 3 */
+.btn-3 {
+	/* background: #fcad26; */
+	background: #474954;
+	color: #fff;
+	width:500px;
+	height:100px;
+}
+
+.btn-3:hover {
+	background: #88C566; /*#f29e0d*/
+}
+
+.btn-3:active {
+	background: #88A566; /* #f58500; */
+	top: 2px;
+}
+
+.btn-3:before {
+	position: absolute;
+	height: 100px;
+	left: 0;
+	top: 0;
+	line-height: 100px;
+	font-size: 140%;
+	width: 60px;
+}
+/* Button 3d */
+.btn-3d {
+	padding: 25px 60px 25px 120px;
+	border-radius: 10px;
+}
+
+.btn-3d:before {
+	background: #fff;
+	color: #88C566; /* #fcad26; */
+	z-index: 2;
+	border-radius: 10px 0 0 10px;
+}
+
+.btn-3d:after {
+	width: 20px;
+	height: 20px;
+	background: #fff;
+	z-index: 1;
+	left: 55px;
+	top: 50%;
+	margin: -10px 0 0 -10px;
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+.btn-3d:active:before {
+	color: #88A566; /* #f58500; */
+}
+
+.btn-3d:active {
+	top: 0;
+}
+
+.btn-3d:active:after {
+	left: 60px;
+}
